@@ -1,0 +1,553 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font-family: BrandonGrotesque, sans-serif !important;
+/*	perspective-origin: 0% 50%;*/
+/*	perspective: 800px;*/
+	background-color: #21212d !important;
+	border-top: 1em #3f4756 solid;
+	/*
+	width: 100%;
+	height: auto;
+*/
+}
+/*PRELOADING BCKG IMG*/
+/*
+body::after{
+	position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+	content: url('https://jennp1987.github.io/Creative-Cog-Design/images/creativeCogHeaderNewpng825.png');
+}
+*/
+
+/*MAIN*/
+main{
+transition: transform 150ms ease-out;
+/*	position: absolute;*/
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+/*	padding: 1em 4em;*/
+	max-width: 100%;
+	background-color: #3f4756;
+	transform: none;
+}
+main.menu-active {
+	transform: translateX(1em) rotateY(1deg);
+}
+
+/*NAV*/
+nav {
+	font-family: BrandonGrotesque-Medium, sans-serif;
+/*	z-index: 100;*/
+}
+
+.navbar > button {
+	background-color: #353441;
+	color: white;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 200;
+	line-height: 60px;
+	font-size: 0.8em;
+	letter-spacing: .1em;
+	border-radius: 0;
+/*	z-index: 300;*/
+}
+
+.navbar > button:hover {
+	color: #353441 !important;
+	background: white !important;
+
+}
+
+/*
+.navbar > button > div > ul > li > a{
+	margin-left: 1em;
+	
+	
+}
+*/
+.navbar-nav .nav-link {
+	padding-left: 1em !important;
+}
+
+.navbar li {
+	list-style: none;
+	padding-right: .5em;
+
+
+}
+
+#collapseExample > ul > li.nav-item.dropdown.show > div {
+	background-color: #353441;
+}
+
+.navbar li,
+collapseExample > ul > li.nav-item.dropdown > div {
+	background-color: #353441;
+
+}
+
+/*STYLES A*/
+#collapseExample > ul > li > a,
+#collapseExample > ul > li.nav-item.dropdown.show > div > div:nth-child(1) > a,
+#collapseExample > ul > li.nav-item.dropdown.show > div > div:nth-child(2) > a {
+	color: #9dc6d1;
+
+}
+
+/*HOVER STYLE*/
+.navbar li a:hover {
+	background-color: #a4844e;
+
+}
+.navbar-toggler:focus,
+ li .dropdown a:active, #collapseExample > ul > li.nav-item.dropdown.show > a{
+	outline: none;
+}
+
+/*STYLE THE INNER Of DROPDOWN*/
+#collapseExample > ul > li.nav-item.dropdown.show > div {
+	padding: 0;
+	border: none;
+}
+/*NAV COLS*/
+body > div > div{
+/*	z-index: 400;*/
+}
+
+/*END NAV*/
+
+/*MAIN*/
+
+/*
+main{
+	width: 100%;
+	height:100%;
+
+}
+*/
+
+/*END MAIN*/
+/*
+.jumbotron::after{
+	position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+	content: url('https://jennp1987.github.io/Creative-Cog-Design/images/creativeCogHeaderNewpng825.png');
+}
+*/
+/*HEADER*/
+#jumbotron {
+	max-width: 100%;
+	background: url('https://jennp1987.github.io/Creative-Cog-Design/images/creativeCogHeaderNewpng825.png');
+	background-size: cover;
+	background-position: center;
+	height: 1100px;
+	background-repeat: no-repeat;
+	background-color: #21212d;
+	border-radius: 0 !important;
+
+}
+
+div .headerContainer {
+	width: inherit;
+	height: inherit;
+	padding: 0 0 0 150px;
+
+}
+
+/*
+h1,h2,h3{
+	display: inline-block;
+}
+*/
+h1 {
+	display: inline-block;
+	font-size: 101px;
+	width: 70%;
+	height: auto;
+	color: #a4844e;
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 300;
+	font-style: normal;
+
+}
+
+h2 {
+	display: inline-block;
+	font-size: 70px;
+	width: 70%;
+	height: auto;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 500;
+	font-style: normal;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 55px;
+	color: #a4844e;
+	width: 70%;
+	height: auto;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.headerContainer h1 {
+	font-size: 101px;
+	font-family: brandon-grotesque, sans-serif !important;
+	-webkit-text-stroke: 1px #a4844e;
+	-webkit-text-fill-color: #21212d;
+	font-weight: 300;
+	font-style: normal;
+	transform: translate(0%, 80%);
+}
+
+.headerContainer h2 {
+	font-size: 70px;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 500;
+	font-style: normal;
+	transform: translate(8%, 90%);
+
+/*
+	animation: move 3s ease-in-out 1s normal;
+	-webkit-animation: move 3s ease-in-out 1s normal;
+	-ms-animation: move 3s ease-in-out 1s normal;
+	-moz-animation: move 3s ease-in-out 1s normal;
+*/
+
+
+/*
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+*/
+	
+	animation: fadeIn ease 8s;
+	-webkit-animation: fadeIn ease 8s;
+	-moz-animation: fadeIn ease 8s;
+	-o-animation: fadeIn ease 8s;
+	-ms-animation: fadeIn ease 8s;
+
+
+}
+
+
+/*
+@-webkit-keyframes move {
+
+	0% {
+		transform: translate(50%, 170%);
+	}
+
+	100% {
+		transform: translate(8%, 170%);
+	}
+
+}
+*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+.headerContainer h3 {
+	font-size: 55px;
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 300;
+	font-style: normal;
+	transform: translate(30%, 100%);
+}
+/*EX EX LG SCREEN*/
+@media only screen and (max-width: 1582px) and (min-width: 1552px){
+	div .headerContainer{
+		padding: 0 0 0 125px;
+	}
+	
+}
+@media only screen and (max-width: 1551px) and (min-width: 1433px) {
+	div .headerContainer{
+		padding: 0 0 0 125px;
+	}
+	.headerContainer h1{
+		font-size: 70px !important;
+	}
+	.headerContainer h2{
+		font-size: 55px;
+		
+	}
+	.headerContainer h3{
+		font-size: 38px;
+	}
+	
+}
+/*EX LG SCREEN*/
+@media only screen and (max-width: 1432px) and (min-width: 1200px) {
+	div .headerContainer{
+		padding: 0 0 0 110px;
+	}
+	.headerContainer h1 {
+		font-size: 68px !important;
+	}
+
+	h1 {
+		font-size: 68px !important;
+	}
+
+	.headerContainer h2 {
+		font-size: 50px !important;
+	}
+
+	.headerContainer h3 {
+		font-size: 35px !important;
+	}
+
+
+}
+
+
+/*LG SCREEN*/
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+	div .headerContainer{
+		padding: 0 0 0 105px;
+	}
+	.headerContainer h1 {
+		font-size: 55px !important;
+	}
+
+	h1 {
+		font-size: 55px !important;
+	}
+
+	.headerContainer h2 {
+		font-size: 40px !important;
+	}
+
+	.headerContainer h3 {
+		font-size: 30px !important;
+	}
+
+}
+
+/*LG SCREEN TO MEDIUM*/
+@media only screen and (max-width: 1119px) and (min-width: 768px) {
+/*
+	.navbar-collapse{
+		padding-right: .5em !important;
+	}
+*/
+}
+
+/*MED SCREEN*/
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	div .headerContainer{
+		padding: 0 0 0 48px;
+	}
+/*
+	main.menu-active{
+		transform: none;
+	}
+*/
+	.headerContainer h1 {
+		font-size: 45px !important;
+	}
+
+
+	.headerContainer h2 {
+		font-size: 32px !important;
+	}
+
+	.headerContainer h3 {
+		font-size: 25px !important;
+	}
+
+}
+
+/*ALL SCREENS SMALLER THAN 767*/
+@media only screen and (max-width:767px) {
+
+	body > div > div > div.col-lg-2.col-md-2.col-sm-12.navDiv {
+		position: absolute !important;
+
+	}
+	main.menu-active{
+		transform: none;
+	}
+
+	header .jumbotron {
+		position: relative;
+
+	}
+	body > div > div > div.col-lg-2.col-md-2.col-sm-12 > nav {
+		padding: 0 !important;
+	}
+	.navDiv {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		
+
+
+	}
+	
+
+	body > div > div > div.col-lg-8.col-md-8.col-sm-12 {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+
+	}
+	.jumbotron {
+	max-width: 100%;
+	background: url('https://jennp1987.github.io/Creative-Cog-Design/images/creativeCogHeaderNewMobile.png');
+
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-color: #21212d;
+
+
+}
+
+	
+
+
+
+}
+
+/*SM SCREEN*/
+@media only screen and (max-width: 767px) and (min-width: 577px) {
+
+	body > div > div > div.col-lg-2.col-md-2.col-sm-12 > nav {
+		padding: 0 !important;
+	}
+	.navbar-toggler {
+		    padding: .25rem 1.2rem !important;
+		
+	}
+	button {
+		/*	width: 100%;*/
+		text-align: left;
+	}
+	.navDiv {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	div .headerContainer{
+		padding: 0 0 0 100px;
+	}
+	.headerContainer h1 {
+		font-size: 43px !important;
+	}
+
+	.headerContainer h2 {
+		font-size: 35px !important;
+	}
+
+	.headerContainer h3 {
+		font-size: 25px !important;
+	}
+
+}
+
+/*EX SM SCREEN*/
+@media only screen and (max-width: 576px) and (min-width: 363px) {
+
+	div .headerContainer{
+		padding: 2em 0 0 100px;
+	}
+
+	body > div > div > div.col-lg-8.col-md-8.col-sm-12 .headerContainer h1 {
+		font-size: 28px !important;
+	}
+
+	h1 {
+		font-size: 28px !important;
+	}
+
+	.headerContainer h2 {
+		font-size: 20px !important;
+	}
+
+	.headerContainer h3 {
+		font-size: 12px !important;
+	}
+	
+
+}
+@media only screen and (max-width: 362px){
+	div .headerContainer{
+		padding: 2em 0 0 20px;
+	}
+	h1 {
+		font-size: 28px !important;
+/*		transform: translate(0%, 80%);*/
+	}
+
+	.headerContainer h2 {
+		font-size: 20px !important;
+/*		transform: translate(8%, 90%);*/
+	}
+
+	.headerContainer h3 {
+		font-size: 12px !important;
+/*		transform: translate(30%, 100%);*/
+	}
+}
