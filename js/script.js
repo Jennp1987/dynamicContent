@@ -1,72 +1,67 @@
-/*eslint-env browser*/
+/* eslint-env browser */
 function fetchData() {
-	"use strict";
-	//GETTING RESPONSE
-	fetch("https://jennp1987.github.io/dynamicContent/js/indexAbout.json").then(response => {
-			//window.console.log(response);
-		if(!response.ok) {
-			throw Error('ERROR');
-		}
-			//WAIT FOR RESPONSE
-			return response.json();
+	'use strict'
+	// eslint-disable-next-line no-tabs
+	// GETTING RESPONSE
+	window.fetch('https://jennp1987.github.io/dynamicContent/js/indexAbout.json').then(response => {
+			// window.console.log(response);
+			if (!response.ok) {
+				throw Error('ERROR')
+			}
+			// WAIT FOR RESPONSE
+			return response.json()
 		})
 		.then(data => {
-			window.console.log(data);
-		
-//		var newHTML = data.data.map(info => {
-//			return '<p>Name: ${info.mission} </p>';
-//			
-//		}).join(" ");
-		
-		//window.console.log(newHTML);
-		
-		
-			//var wrap = document.getElementById('jumbotron');
-			//wrap.innerHTML += '<div class="newData"></div>';
-		document .querySelector('#jumbotron').insertAdjacentHTML('afterbegin', newHTML);
-			
+			window.console.log(data)
+			window.alert(data.mission)
+			// var newHTML = data.data.map(info => {
+			// return '<p>Name: ${info.mission} </p>';
+			//
+			// }).join(" ");
+			// window.console.log(newHTML);
+			// var wrap = document.getElementById('jumbotron');
+			// wrap.innerHTML += '<div class="newData"></div>';
 		})
 		.catch(error => {
-			window.console.log(error);
-	});
+			window.console.log(error)
+		})
 }
 
 function yHandler() {
-	"use strict";
+	'use strict'
 
-	//AMOUNT OF SCROLLABLE HEIGHT
-	//var scrollable = document.documentElement.scrollHeight - window.innerHeight;
-	//HOW MUCH THE USER HAS SCROLLED DOWN
-	//	var scrolled = window.scrollY;
-	//	if (Math.ceil(scrolled) === scrollable) {
-	//		window.alert("You hav reached the bottom!");
-	//		var wrap = document.getElementById('jumbotron');
-	//		var newDiv = document.createElement('div');
-	//			newDiv.setAttribute('class', 'newData');
-	//			wrap.appendChild(newDiv);
+	// AMOUNT OF SCROLLABLE HEIGHT
+	// var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+	// HOW MUCH THE USER HAS SCROLLED DOWN
+	// var scrolled = window.scrollY;
+	// if (Math.ceil(scrolled) === scrollable) {
+	// window.alert("You hav reached the bottom!");
+	// var wrap = document.getElementById('jumbotron');
+	//  var newDiv = document.createElement('div');
+	//  newDiv.setAttribute('class', 'newData');
+	//  wrap.appendChild(newDiv);
+	// AJAX CALL TO GET MORE DYNAMIC DATA GOES HERE
+	// }
 
-	//		//AJAX CALL TO GET MORE DYNAMIC DATA GOES HERE
-	//}
+	var wrap = document.getElementById('jumbotron')
 
-	var wrap = document.getElementById('jumbotron');
-
-	//GET PG CONTENT HEIGHT OF EVERYTHING WITHIN DIV
+	// GET PG CONTENT HEIGHT OF EVERYTHING WITHIN DIV
 	var contentHeight = wrap.offsetHeight,
-		//GET VERTICAL SCROLL POSITION - GTS WHERE USER IS IN THE Y POSITION
+		// GET VERTICAL SCROLL POSITION - GTS WHERE USER IS IN THE Y POSITION
 		yOffset = window.pageYOffset,
-		//TARGETING THE BOTTOM OF THE PAGE
-		y = yOffset + window.innerHeight;
+		// TARGETING THE BOTTOM OF THE PAGE
+		y = yOffset + window.innerHeight
 
-	//IF USER HAS GONE TO THE BOTTOM OR OVER
+	// IF USER HAS GONE TO THE BOTTOM OR OVER
 	if (y >= contentHeight) {
-		//PRELOAD SCRIPT AND CALL NEXT FUNCTION
-//		wrap.innerHTML += '<div class="newData"></div>';
-		//AJAX CALL TO GET MORE DYNAMIC DATA GOES HERE
+		// PRELOAD SCRIPT AND CALL NEXT FUNCTION
+		// wrap.innerHTML += '<div class="newData"></div>';
+		// AJAX CALL TO GET MORE DYNAMIC DATA GOES HERE
 
-		fetchData();
+		fetchData()
 	}
-	//	var status = document.getElementById('status');
-	//	status.innerHTML = contentHeight + " | " + y;
+	// var status = document.getElementById('status');
+	// status.innerHTML = contentHeight + " | " + y;
 
 }
-window.onscroll = yHandler;
+window.onscroll = yHandler
